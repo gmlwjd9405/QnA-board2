@@ -1,6 +1,6 @@
 package com.hee.web;
 
-import com.hee.domain.posts.PostsSaveRequestDto;
+import com.hee.dto.PostsSaveRequestDto;
 import com.hee.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

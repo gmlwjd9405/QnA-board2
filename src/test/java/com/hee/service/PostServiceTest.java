@@ -1,8 +1,8 @@
 package com.hee.service;
 
 import com.hee.domain.posts.Posts;
-import com.hee.domain.posts.PostsRepository;
-import com.hee.domain.posts.PostsSaveRequestDto;
+import com.hee.repository.PostsRepository;
+import com.hee.dto.PostsSaveRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

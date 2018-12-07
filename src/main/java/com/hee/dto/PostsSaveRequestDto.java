@@ -1,5 +1,6 @@
-package com.hee.domain.posts;
+package com.hee.dto;
 
+import com.hee.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

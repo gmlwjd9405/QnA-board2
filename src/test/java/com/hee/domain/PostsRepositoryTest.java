@@ -1,7 +1,7 @@
 package com.hee.domain;
 
 import com.hee.domain.posts.Posts;
-import com.hee.domain.posts.PostsRepository;
+import com.hee.repository.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
