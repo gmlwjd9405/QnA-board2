@@ -19,7 +19,7 @@ echo "> 새 어플리케이션 배포"
 echo "> Build 파일 복사"
 cp $REPOSITORY/build/build/libs/*.jar $REPOSITORY/jar/
 
-JAR_NAME=$(ls $REPOSITORY/jar/ |grep 'qna-board2' | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/jar/ |grep 'qna-board2' | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 
