@@ -1,18 +1,43 @@
 spring:
   profiles:
     active: local # 기본 환경 선택
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
-# local 환경
+# local 환경 (MySQL)
 ---
 spring:
   profiles: local
   datasource:
     data: classpath:data-h2.sql # 시작할때 실행시킬 script
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+  mvc:
+    static-path-pattern: /static/**
+  freemarker:
+    suffix: .html
+
+server:
+  port: 9000
+
+# 개발 환경 (H2)
+---
+spring:
+  profiles: dev
+  datasource:
+    data: classpath:import.sql # 시작할 때 dummy data setting
+    username: sa
+    password:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
     show-sql: true
     hibernate:
       ddl-auto: create-drop
@@ -21,7 +46,7 @@ spring:
       enabled: true
 
 server:
-  port: 9000
+  port: 9001
 
 # 운영 환경
 ---
