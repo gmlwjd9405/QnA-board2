@@ -1,6 +1,6 @@
-# element-starter
+# qna-board front 
 
-> Element UI Example
+> Vue.js with Element UI
 
 ## Build Setup
 
